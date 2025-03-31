@@ -3,9 +3,14 @@ import NameFields from './NameFields';
 import DateField from './DateField';
 import AddressFields from './AddressFields';
 import SelectField from './SelectField';
+import { useDispatch } from 'react-redux';
+import { addEmployee } from '../features/employeesSlice';
 
 function FormEmployee() {
-  const [formData, setFormData] = useState({
+
+  const dispatch = useDispatch();
+
+  const initialFormData = {
     firstName: '',
     lastName: '',
     birthDate: '',
@@ -15,8 +20,9 @@ function FormEmployee() {
     state: '',
     zipCode: '',
     department: '',
-    // autres champs plus tard
-  });
+  };  
+
+  const [formData, setFormData] = useState(initialFormData);
 
   function updateField (field, value) {
     setFormData((prev) => ({
@@ -27,8 +33,10 @@ function FormEmployee() {
 
   function handleSubmit(e) {
     e.preventDefault();
+    dispatch(addEmployee(formData));
+    // Reset form data after submission
+    setFormData(initialFormData);
     console.log('Formulaire envoyé :', formData);
-    // TODO : stocker dans localStorage ou global state plus tard
   }
 
   return (
