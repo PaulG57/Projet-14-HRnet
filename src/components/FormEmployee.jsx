@@ -34,7 +34,6 @@ function FormEmployee() {
   function handleSubmit(e) {
     e.preventDefault();
     dispatch(addEmployee(formData));
-    // Reset form data after submission
     setFormData(initialFormData);
     console.log('Formulaire envoyé :', formData);
   }
