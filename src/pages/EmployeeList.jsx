@@ -1,9 +1,8 @@
 import DataTable from 'datatables.net-react';
 import DT from 'datatables.net-bs5';
 import { useSelector } from 'react-redux';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'datatables.net-bs5/css/dataTables.bootstrap5.css';
 import { Link } from 'react-router-dom';
+import '../styles/DataTableCustom.css';
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 DataTable.use(DT);

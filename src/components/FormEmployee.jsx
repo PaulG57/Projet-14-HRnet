@@ -5,6 +5,7 @@ import AddressFields from './AddressFields';
 import SelectField from './SelectField';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../features/employeesSlice';
+import { Modal } from 'modal-react-pg';
 
 function FormEmployee() {
 
@@ -23,6 +24,7 @@ function FormEmployee() {
   };  
 
   const [formData, setFormData] = useState(initialFormData);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   function updateField (field, value) {
     setFormData((prev) => ({
@@ -35,6 +37,7 @@ function FormEmployee() {
     e.preventDefault();
     dispatch(addEmployee(formData));
     setFormData(initialFormData);
+    setIsModalOpen(true);
     console.log('Formulaire envoyé :', formData);
   }
 
@@ -75,7 +78,15 @@ function FormEmployee() {
       />
 
       <button type="submit">Save</button>
+
+      <Modal
+        isOpen={isModalOpen}
+        message="Employee Created !"
+        onClose={() => setIsModalOpen(false)}
+      />
+
     </form>
+    
   );
 }
 
