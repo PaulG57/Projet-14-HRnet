@@ -3,6 +3,7 @@ import DT from 'datatables.net-bs5';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import '../styles/DataTableCustom.css';
+import '../styles/EmployeeList.css';
 
 // eslint-disable-next-line react-hooks/rules-of-hooks
 DataTable.use(DT);
@@ -23,9 +24,9 @@ function EmployeeList() {
   ]);
 
   return (
-    <div>
+    <div className="employee-list-page">
       <h1>Current Employees</h1>
-      <DataTable data={data} className="display">
+      <DataTable data={data} className="EmployeeTable">
         <thead>
           <tr>
             <th>First Name</th>

@@ -6,6 +6,9 @@ import SelectField from './SelectField';
 import { useDispatch } from 'react-redux';
 import { addEmployee } from '../features/employeesSlice';
 import { Modal } from 'modal-react-pg';
+import departments from '../data/departments';
+import states from '../data/states';
+import '../styles/Form.css';
 
 function FormEmployee() {
 
@@ -18,9 +21,9 @@ function FormEmployee() {
     startDate: '',
     street: '',
     city: '',
-    state: '',
+    state: states[0].abbreviation,
     zipCode: '',
-    department: '',
+    department: departments[0].value,
   };  
 
   const [formData, setFormData] = useState(initialFormData);
@@ -42,7 +45,7 @@ function FormEmployee() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form form-employee" onSubmit={handleSubmit}>
 
       <NameFields
         firstName={formData.firstName}
@@ -74,7 +77,7 @@ function FormEmployee() {
         id="department"
         value={formData.department}
         onChange={(val) => updateField('department', val)}
-        options={['Sales', 'Marketing', 'Engineering', 'Human Resources', 'Legal']}
+        options={departments}
       />
 
       <button type="submit">Save</button>

@@ -5,5 +5,15 @@ table {
 .justify-content-between {
   display: flex;
   justify-content: space-between;
-    align-items: center;
+  align-items: center;
+  margin-bottom: 0.2rem;
+}
+
+table.dataTable th.dt-type-numeric, table.dataTable th.dt-type-date,
+table.dataTable td.dt-type-numeric, table.dataTable td.dt-type-date {
+   text-align: center;
+}
+
+.dt-layout-table {
+  display: block;
 }

@@ -1,17 +1,22 @@
 body {
-  margin: 0;
   display: flex;
-  place-items: center;
+  justify-content: center;
   min-width: 320px;
   min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+}
+
+#root {
+  width: 100%;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
-}
-a:visited {
-  color: inherit;
+  color: #0056b3;
 }
 a:hover {
   text-decoration: underline;

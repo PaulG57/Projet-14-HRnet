@@ -1,0 +1,79 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 600px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+  }
+  
+  .form h4 {
+    margin: 0 0 1rem 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+    font-size: 0.9rem;
+    text-align: left;
+  }
+  
+  .form input {
+    padding: 0.3rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+  }
+  
+  .form button[type="submit"] {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .form button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+
+  .name-fields {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .select-field {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+  }
+  
+  .address-fields {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    position: relative;
+    margin-top: 0.5rem;
+  }
+  
+  .address-fields h4 {
+    position: absolute;
+    top: -0.6rem;
+    left: 1rem;
+    background-color: white;
+    padding: 0 0.5rem;
+    font-weight: 600;
+    font-size: 1rem;
+  }

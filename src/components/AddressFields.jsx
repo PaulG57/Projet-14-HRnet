@@ -1,18 +1,15 @@
 import SelectField from './SelectField';
+import states from '../data/states';
 
-const US_STATES = [
-  'Alabama',
-  'Alaska',
-  'Arizona',
-  'California',
-  'New York',
-  'Texas',
-  // Ajoute les autres si tu veux
-];
+const stateOptions = states.map((state) => ({
+  value: state.abbreviation,
+  label: state.name,
+}));
 
 function AddressFields({ formData, updateField }) {
   return (
-    <div className="address-fields">
+    <div className="address-fields form">
+      <h4>Address</h4>
       <div>
         <label htmlFor="street">Street</label>
         <input
@@ -38,7 +35,7 @@ function AddressFields({ formData, updateField }) {
         id="state"
         value={formData.state}
         onChange={(val) => updateField('state', val)}
-        options={US_STATES}
+        options={stateOptions}
       />
 
       <div>

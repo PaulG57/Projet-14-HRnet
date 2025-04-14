@@ -1,7 +1,6 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import CreateEmployee from './pages/CreateEmployee';
 import EmployeeList from './pages/EmployeeList';
-import './App.css';
 
 function App() {
   return (

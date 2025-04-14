@@ -1,0 +1,40 @@
+.employee-list-page {
+    max-width: 960px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background-color: #fdfdfd;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+  }
+  
+.employee-list-page h1 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+table.dataTable {
+    font-size: 0.95rem;
+    border: 1px solid #e5e5e5;
+  }
+  
+table.dataTable thead {
+    background-color: #f0f4f8;
+    font-weight: 600;
+  }
+  
+table.dataTable td, table.dataTable th {
+    padding: 0.75rem;
+    border-bottom: 1px solid #eaeaea;
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+table.dataTable tbody tr:nth-child(odd) {
+  background-color: #f9f9f9;
+}
+
+table.dataTable tbody tr:hover {
+  background-color: #e6f0ff;
+}
